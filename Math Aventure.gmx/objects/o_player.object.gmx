@@ -55,7 +55,6 @@ walksp = 4
 key_left = keyboard_check(vk_left)
 key_right = keyboard_check(vk_right)
 key_jump = keyboard_check(vk_up)
-key_attack = keyboard_check (vk_space)
 
 //Moving
 var move = key_right - key_left
@@ -107,24 +106,10 @@ else
         else 
         {   
         sprite_index = s_player_walk
-        image_speed  = 4 / room_speed
+        
         }
 }
 if (hsp != 0) image_xscale = sign(hsp)
-
-//attack
-if (key_attack )
-{
-    if(hsp &gt; 0)
-    {
-        sprite_index = s_player_attack
-        image_speed=8/room_speed
-    }
-}
-if (sprite_index == s_player_attack &amp;&amp; image_index &gt;= 4)
-{
-    sprite_index = s_player
-}
 </string>
           </argument>
         </arguments>
